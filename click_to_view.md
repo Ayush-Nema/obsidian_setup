@@ -4,16 +4,16 @@
    
 ```html
 <details>
-<summary>Click to see image</summary>
-<br>
-<img width="100%" src="dirname/filename.png">
----
+   <summary>Click to see image</summary>
+   <br>
+   <img width="100%" src="dirname/filename.png">
+   ---
 </details>
 ```
 
 2. For viewing the text
 
-```html
+```md
 <details>
   <summary>Click me</summary>
   
