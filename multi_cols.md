@@ -24,3 +24,5 @@ Paste the following HTML codeblock to add multiple columns. The example provides
     <img src="attachment:123357d7-b3e1-4932-84df-2b341477ec98.png"  width="25%" height="30%">
 </div>
 ```
+
+- There is an Obsidian extension: [multi-column markdown](https://github.com/ckRobinson/multi-column-markdown) for creating multiple column and customizing them. Check usage in Git page.
