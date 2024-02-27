@@ -56,6 +56,14 @@ git clone https://github.com/powerline/fonts.git
 - To change the font, navigate to `iTerm2 > Preferences > Profiles > Text > Change Font`
 
 #### Plugins
+
+##### 0. Create general alias
+```
+alias ..="cd .."
+alias ...="cd ../.."
+alias c="clear"
+```
+
 ##### 1. `zsh-syntax-highlighting` 
 - Run the following to download plugin
 ```bash
@@ -123,4 +131,8 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 ### Install python
 https://www.python.org/downloads/macos/
+
+- It seems like after Monterey OS in Mac, default Python2 has been removed.
+- Once the Pyton installation is done, go to `~/.zshrc` and create an alias for python as follows.
+`alias python="python3"` 
 
