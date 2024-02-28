@@ -35,6 +35,11 @@ or
 $ omz update
 ```
 #### Updating the theme
+**Theme options:**
+- [Built-in ZSH themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+- [External themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)
+
+
 Better option: https://github.com/romkatv/powerlevel10k#homebrew
 - Install the new theme (`powerlevel9k` here)
 ```bash
@@ -133,6 +138,6 @@ pbcopy < ~/.ssh/id_rsa.pub
 https://www.python.org/downloads/macos/
 
 - It seems like after Monterey OS in Mac, default Python2 has been removed.
-- Once the Pyton installation is done, go to `~/.zshrc` and create an alias for python as follows.
+- Once the Pyton installation is done, go to `~/.zshrc` and create an alias for python as follows.  
 `alias python="python3"` 
 
