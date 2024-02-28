@@ -20,6 +20,12 @@
 - If asked for password, use the system password.
 - It installs Git also
 
+- Once installation is done:  
+  - Run these two commands in your terminal to add Homebrew to your PATH:  
+    `(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/thunder/.zprofile`  
+    `eval "$(/opt/homebrew/bin/brew shellenv)"`  
+  - Run `brew help` to get started or run `man brew` to know more about Homebrew
+
 ### Install `oh-my-zsh`
 - Refer official website: https://ohmyz.sh/#install
 ```shell
