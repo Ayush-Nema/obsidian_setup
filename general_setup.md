@@ -34,6 +34,7 @@ or
 ```
 $ omz update
 ```
+
 #### Updating the theme
 **Theme options:**
 - [Built-in ZSH themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
@@ -61,6 +62,9 @@ git clone https://github.com/powerline/fonts.git
 - To change the font, navigate to `iTerm2 > Preferences > Profiles > Text > Change Font`
 
 #### Plugins
+
+Plugins page of ZSH: [ZSH plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+Awesome ZSH plugins: [Git page](https://github.com/unixorn/awesome-zsh-plugins)
 
 ##### 0. Create general alias
 ```
