@@ -44,14 +44,14 @@ $ omz update
 
 
 Better option: https://github.com/romkatv/powerlevel10k#homebrew
-- Install the new theme (`powerlevel9k` here)
+- Install the new theme (`powerlevel10k` here)
 ```bash
-$ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 - Open `~/.zshrc` 
 - Navigate to `ZSH_THEME` variable and change it to following:
 ```bash
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 - `source ~/.zshrc`
 - Navigate to `iTerm2 > Settings > Profiles > Colors`
