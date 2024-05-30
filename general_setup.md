@@ -33,10 +33,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 
 Run the following to update and get the latest features in oh-my-zsh
-```bash
-upgrade_oh_my_zsh
-```
-or 
 ```
 $ omz update
 ```
