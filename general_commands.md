@@ -114,8 +114,8 @@
 
 
 ---
-
-### Create a condo virtual environment
+## Virtual and Conda environment
+### Create a conda environment
 `$ conda create --no-default-packages -n <conda-env-name> python=3.7`
 OR
 `$ conda create -n <name of conda_env> python=3.7`
@@ -129,14 +129,51 @@ OR
 https://gist.github.com/AdamGagorik/248bedfcccd5e9a0b6f953fa1dc87f1a
 Also, do `pip install jupyter`
 
+
 ### Adding a virtual environment to Jupyter notebook
 `pip install --user ipykernel`
 `python -m ipykernel install --user --name=<name of virtual_env>`
 
-https://medium.com/@nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-steps-abeab8b8d084 
-and 
-https://janakiev.com/blog/jupyter-virtual-envs/ 
+https://medium.com/@nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-steps-abeab8b8d084  
+and  
+https://janakiev.com/blog/jupyter-virtual-envs/  
 
 ---
+
+## EC2 instance related
+1. Initiating the EC2 instance  
+`$ ssh -v -I ~/Downloads/an_ec2_key.pem -L 8888:localhost:8888 ubuntu@ec2-3-12-83-190.us-east-2.compute.amazonaws.com`
+[here, -L 8888:localhost:8888 is the port tunnelling, -v is for controlling the verbosity level , set to debug]
+Format: `ssh -i abc.pem -L <remote_port>:localhost:<local_port> <remote_user>@<remote_host>`
+More about port tunnelling: https://tinyurl.com/y4xhv9fo
+
+2. Activate the condo virtual environment 
+`conda activate virtual_env`
+
+3. Getting the anaconda
+`$ wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh`  
+`$ bash Anaconda3-2022.10-Linux-x86_64.sh`  
+Go to the virtual environment: `conda activate virtual_env` then `pip install jupyter`  
+(https://repo.anaconda.com/archive/) -> stores all versions  
+- more instructions here: https://docs.anaconda.com/anaconda/install/linux/   
+- install jupyter notebook: `pip install notebook`  
+- install jupyter lab: `pip install jupyterlab`  
+
+4. Setting up the Jupyter notebook
+`$ pip install jupyter`   
+`$ jupyter notebook --no-browser --port=8888` (this command forces jupyter notebook to use port 8888)
+
+5. Attaching environment to notebook
+	conda environment :→
+	`conda install nb_conda`
+	`conda install -c anaconda ipykernel`
+	`python -m ipykernel install --user --name=<env_name>`  
+
+	virtual environment :→
+	`pip install --user ipykernel`  
+	`python -m ipykernel install --user --name=myenv`
+
+---
+
 
 
