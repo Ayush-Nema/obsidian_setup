@@ -175,5 +175,46 @@ Go to the virtual environment: `conda activate virtual_env` then `pip install ju
 
 ---
 
+## CUDA and NVIDIA drivers installation
+- Purge clean CUDA from the instance:
+ - `sudo apt-get purge nvidia*`
+ - `sudo apt-get autoremove`
+ - `sudo apt-get autoclean`
+ - `sudo rm -rf /usr/local/cuda*`
+ - Note: CUDA drivers are installed in `/usr/local` directory
+
+- Installation of the drivers
+ - Click on the CUDA version to install. Check backward compatibility with libs like Tensorflow before clicking. Click on the version and select OS, version etc and execute the commands.   
+ - https://developer.nvidia.com/cuda-toolkit-archive  
+ - check the installation by running `nvidia-smi`   
+ - to install the cuda toolkit: `$ sudo apt install nvidia-cuda-toolkit`
+
+- Check the CUDA version using: `nvcc —version`. 
+    - alternate: `dpkg -l | grep cuda`
+
+- Once the cuda is installed based on above instructions, try `nvcc -V`, if it fails then probably automatic addition of cuda to PATH variable has failed. Add the following to `~/.bashrc`, once done source it:
+- `export CUDA_HOME=/usr/local/cuda`
+- `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64`
+- `export PATH=$PATH:$CUDA_HOME/bin`
+
+
+Mandatory requirements For GPU utilisation
+https://www.tensorflow.org/install/gpu
+
+CUDA Drivers installation guide:
+1. https://gist.github.com/bogdan-kulynych/f64eb148eeef9696c70d485a76e42c3a
+2. https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html 
+3. https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=debnetwork  
+4. GPU utilisation test: https://www.tensorflow.org/guide/gpu 
+5. Checking for compatibility: https://www.tensorflow.org/install/source#linux 
+
+CUDA toolkit installation:
+https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local 
+
+- Nvidia cuDNN documentation
+	- https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html   
+- Verify Cuda installation
+	- https://xcat-docs.readthedocs.io/en/stable/advanced/gpu/nvidia/ verify_cuda_install.html 
+
 
 
