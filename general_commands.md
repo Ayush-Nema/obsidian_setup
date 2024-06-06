@@ -109,3 +109,34 @@
     2. `git status (for checking)`
     3. `git push -f origin <name-of-branch>`
 57. To check the remaining space in Ubuntu system: `df -h`
+58. To get the nvidia drivers version: `cat /proc/driver/nvidia/version`
+59. Use `sudo -i` to enter into the root shell. This will have all the permissions and commands will run without `sudo`. Run `exit` to exit the shell and return to base terminal.
+
+
+---
+
+### Create a condo virtual environment
+`$ conda create --no-default-packages -n <conda-env-name> python=3.7`
+OR
+`$ conda create -n <name of conda_env> python=3.7`
+`$ conda update -n base conda` [to update the conda environment]
+
+- Delete conda environment
+`$ conda env remove -n <name of conda_env>`
+
+
+### Using the jupyter notebook (tips and shortcuts)
+https://gist.github.com/AdamGagorik/248bedfcccd5e9a0b6f953fa1dc87f1a
+Also, do `pip install jupyter`
+
+### Adding a virtual environment to Jupyter notebook
+`pip install --user ipykernel`
+`python -m ipykernel install --user --name=<name of virtual_env>`
+
+https://medium.com/@nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-steps-abeab8b8d084 
+and 
+https://janakiev.com/blog/jupyter-virtual-envs/ 
+
+---
+
+
